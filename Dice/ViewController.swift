@@ -8,19 +8,21 @@
 
 import UIKit
 import AudioToolbox
+import AVKit
 
 class ViewController: UIViewController, AdbertADBannerDelegate, GADBannerViewDelegate{
     
     var timer : Timer?
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var diceView: UIView!
-    let diceImageView = UIImageView()
+    @IBOutlet weak var diceImageView: UIImageView!
     var banner : AdbertADBanner!
     var bannerView: GADBannerView!
     @IBOutlet weak var adView: UIView!
     @IBOutlet weak var adViewUp: UIView!
     @IBOutlet weak var upLabel: UILabel!
     @IBOutlet weak var doenLabel: UILabel!
+    var blackView = UIView()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -46,12 +48,9 @@ class ViewController: UIViewController, AdbertADBannerDelegate, GADBannerViewDel
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         changeBackgroundColor()
-        diceImageView.frame.size = diceView.frame.size
-        diceImageView.frame.origin = CGPoint(x: 0, y: 0)
         diceImageView.image = UIImage(named: "1")
         diceImageView.clipsToBounds = true
         diceImageView.layer.cornerRadius = 20
-        diceView.addSubview(diceImageView)
     }
     
     func changeBackgroundColor() {
@@ -72,9 +71,33 @@ class ViewController: UIViewController, AdbertADBannerDelegate, GADBannerViewDel
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            rollingAnimation()
             let number = Int.random(in: 1 ..< 7)
             diceLayout(number: number)
         }
+    }
+    
+    func rollingAnimation() {
+        blackView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        blackView.tag = 123
+        blackView.backgroundColor = UIColor.black
+        playDiceVideoin(videoView: blackView)
+        view.addSubview(blackView)
+    }
+    
+    func playDiceVideoin(videoView: UIView) {
+        let videoURL: NSURL = Bundle.main.url(forResource: "Dice", withExtension: "mp4")! as NSURL
+        let player = AVPlayer(url: videoURL as URL)
+        let playerLayer = AVPlayerLayer(player: player)
+        NotificationCenter.default.addObserver(self, selector: #selector(playFinish),
+        name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        playerLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        videoView.layer.addSublayer(playerLayer)
+        player.play()
+    }
+    
+    @objc func playFinish() {
+        view.viewWithTag(123)?.removeFromSuperview()
     }
     
     func diceLayout(number:Int) {

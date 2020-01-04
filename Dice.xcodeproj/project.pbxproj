@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C873B74E23C0981A00E2FF97 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873B74D23C0981A00E2FF97 /* GIF.swift */; };
+		C873B75423C0A18E00E2FF97 /* Dice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C873B75323C0A18D00E2FF97 /* Dice.mp4 */; };
 		C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470423BF443800F1FB02 /* AdSupport.framework */; };
 		C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470623BF444200F1FB02 /* AudioToolbox.framework */; };
 		C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470823BF444900F1FB02 /* AVFoundation.framework */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C873B74D23C0981A00E2FF97 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		C873B75323C0A18D00E2FF97 /* Dice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dice.mp4; sourceTree = "<group>"; };
 		C88246F923BF43A800F1FB02 /* AdbertADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADInterstitial.h; sourceTree = "<group>"; };
 		C88246FA23BF43A800F1FB02 /* AdbertADBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADBannerDelegate.h; sourceTree = "<group>"; };
 		C88246FB23BF43A800F1FB02 /* ADBERT_AD_SDK_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBERT_AD_SDK_Maker.h; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 				C8A82C0723A63A320036D1EC /* Assets.xcassets */,
 				C8A82C0923A63A320036D1EC /* LaunchScreen.storyboard */,
 				C8A82C0C23A63A320036D1EC /* Info.plist */,
+				C873B74D23C0981A00E2FF97 /* GIF.swift */,
+				C873B75323C0A18D00E2FF97 /* Dice.mp4 */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C873B75423C0A18E00E2FF97 /* Dice.mp4 in Resources */,
 				C882472823BF455700F1FB02 /* GoogleUtilities-LICENSE in Resources */,
 				C882472723BF455700F1FB02 /* OpenMeasurement-LICENSE in Resources */,
 				C882472623BF455700F1FB02 /* NanoPB-LICENSE in Resources */,
@@ -397,6 +404,7 @@
 			files = (
 				C8A82C0323A63A320036D1EC /* ViewController.swift in Sources */,
 				C8A82BFF23A63A320036D1EC /* AppDelegate.swift in Sources */,
+				C873B74E23C0981A00E2FF97 /* GIF.swift in Sources */,
 				C8A82C0123A63A320036D1EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,7 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L296PZEJ9H;
+				DEVELOPMENT_TEAM = 7X544A9LTF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.53.1",
@@ -589,7 +597,7 @@
 					"$(PROJECT_DIR)/Dice",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = joe.Dices;
+				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
 				SWIFT_VERSION = 5.0;
@@ -602,7 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L296PZEJ9H;
+				DEVELOPMENT_TEAM = 7X544A9LTF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.53.1",
@@ -620,7 +628,7 @@
 					"$(PROJECT_DIR)/Dice",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = joe.Dices;
+				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
 				SWIFT_VERSION = 5.0;
