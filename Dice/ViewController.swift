@@ -10,16 +10,12 @@ import UIKit
 import AudioToolbox
 import AVKit
 
-class ViewController: UIViewController, AdbertADBannerDelegate, GADBannerViewDelegate{
+class ViewController: UIViewController{
     
     var timer : Timer?
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var diceView: UIView!
     @IBOutlet weak var diceImageView: UIImageView!
-    var banner : AdbertADBanner!
-    var bannerView: GADBannerView!
-    @IBOutlet weak var adView: UIView!
-    @IBOutlet weak var adViewUp: UIView!
     @IBOutlet weak var upLabel: UILabel!
     @IBOutlet weak var doenLabel: UILabel!
     var blackView = UIView()
@@ -32,16 +28,7 @@ class ViewController: UIViewController, AdbertADBannerDelegate, GADBannerViewDel
         diceView.layer.borderWidth = 10
         diceView.layer.borderColor = UIColor.black.cgColor
         diceView.layer.cornerRadius = 20
-        banner = AdbertADBanner.init(appid: "ad-adb-1c8bc3c1d521", andAPPKEY: "a961268138235")
-        banner.frame = CGRect(x: 0, y: 0, width:adView.bounds.width, height:adView.bounds.height)
-        banner.delegate = self
-        banner.requestAD()
         view.backgroundColor = UIColor.gray
-        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        adViewUp.addSubview(bannerView)
-        bannerView.load(GADRequest())
     }
     
     override func viewDidLoad() {
@@ -104,46 +91,5 @@ class ViewController: UIViewController, AdbertADBannerDelegate, GADBannerViewDel
         diceImageView.image = UIImage(named:"\(number)")
     }
     
-    func adbertADViewDidReceiveAd(_ banner: AdbertADBanner!) {
-        adView.addSubview(banner)
-        banner.showAD()
-    }
-    
-    func adbertADView(_ banner: AdbertADBanner!, didFailToReceiveAdWithError error: Error!) {
-        print("adbert ad receive fail")
-    }
-    
-    /// Tells the delegate an ad request loaded an ad.
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("adViewDidReceiveAd")
-    }
-
-    /// Tells the delegate an ad request failed.
-    func adView(_ bannerView: GADBannerView,
-        didFailToReceiveAdWithError error: GADRequestError) {
-      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-
-    /// Tells the delegate that a full-screen view will be presented in response
-    /// to the user clicking on an ad.
-    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
-      print("adViewWillPresentScreen")
-    }
-
-    /// Tells the delegate that the full-screen view will be dismissed.
-    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewWillDismissScreen")
-    }
-
-    /// Tells the delegate that the full-screen view has been dismissed.
-    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewDidDismissScreen")
-    }
-
-    /// Tells the delegate that a user click will open another app (such as
-    /// the App Store), backgrounding the current app.
-    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
-      print("adViewWillLeaveApplication")
-    }
 }
 

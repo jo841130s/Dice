@@ -21,22 +21,12 @@
 		C882471723BF446E00F1FB02 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471623BF446E00F1FB02 /* StoreKit.framework */; };
 		C882471923BF447900F1FB02 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471823BF447900F1FB02 /* SystemConfiguration.framework */; };
 		C882471B23BF447D00F1FB02 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471A23BF447D00F1FB02 /* WebKit.framework */; };
-		C882472523BF455700F1FB02 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471D23BF455700F1FB02 /* GoogleAppMeasurement.framework */; };
-		C882472623BF455700F1FB02 /* NanoPB-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C882471F23BF455700F1FB02 /* NanoPB-LICENSE */; };
-		C882472723BF455700F1FB02 /* OpenMeasurement-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C882472023BF455700F1FB02 /* OpenMeasurement-LICENSE */; };
-		C882472823BF455700F1FB02 /* GoogleUtilities-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C882472123BF455700F1FB02 /* GoogleUtilities-LICENSE */; };
-		C882472923BF455700F1FB02 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882472223BF455700F1FB02 /* GoogleUtilities.framework */; };
-		C882472A23BF455700F1FB02 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882472323BF455700F1FB02 /* nanopb.framework */; };
-		C882472B23BF455700F1FB02 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882472423BF455700F1FB02 /* GoogleMobileAds.framework */; };
-		C882472D23BF46B200F1FB02 /* libADBERT_AD_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C882472C23BF46B200F1FB02 /* libADBERT_AD_SDK.a */; };
 		C8A82BFF23A63A320036D1EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82BFE23A63A320036D1EC /* AppDelegate.swift */; };
 		C8A82C0123A63A320036D1EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82C0023A63A320036D1EC /* SceneDelegate.swift */; };
 		C8A82C0323A63A320036D1EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82C0223A63A320036D1EC /* ViewController.swift */; };
 		C8A82C0623A63A320036D1EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A82C0423A63A320036D1EC /* Main.storyboard */; };
 		C8A82C0823A63A320036D1EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8A82C0723A63A320036D1EC /* Assets.xcassets */; };
 		C8A82C0B23A63A320036D1EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A82C0923A63A320036D1EC /* LaunchScreen.storyboard */; };
-		C8A82C1623A63A330036D1EC /* DiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82C1523A63A330036D1EC /* DiceTests.swift */; };
-		C8A82C2123A63A330036D1EC /* DiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82C2023A63A330036D1EC /* DiceUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +56,6 @@
 		C88246FD23BF43A800F1FB02 /* AdbertADInterstitalDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADInterstitalDelegate.h; sourceTree = "<group>"; };
 		C88246FE23BF43A800F1FB02 /* AdbertADBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADBanner.h; sourceTree = "<group>"; };
 		C88246FF23BF43A800F1FB02 /* AdbertADNativeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADNativeDelegate.h; sourceTree = "<group>"; };
-		C882470223BF43C900F1FB02 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C882470423BF443800F1FB02 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C882470623BF444200F1FB02 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C882470823BF444900F1FB02 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -79,14 +68,6 @@
 		C882471623BF446E00F1FB02 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C882471823BF447900F1FB02 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C882471A23BF447D00F1FB02 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		C882471D23BF455700F1FB02 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
-		C882471F23BF455700F1FB02 /* NanoPB-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NanoPB-LICENSE"; sourceTree = "<group>"; };
-		C882472023BF455700F1FB02 /* OpenMeasurement-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OpenMeasurement-LICENSE"; sourceTree = "<group>"; };
-		C882472123BF455700F1FB02 /* GoogleUtilities-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GoogleUtilities-LICENSE"; sourceTree = "<group>"; };
-		C882472223BF455700F1FB02 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
-		C882472323BF455700F1FB02 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
-		C882472423BF455700F1FB02 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		C882472C23BF46B200F1FB02 /* libADBERT_AD_SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libADBERT_AD_SDK.a; sourceTree = "<group>"; };
 		C8A82BFB23A63A320036D1EC /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A82BFE23A63A320036D1EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8A82C0023A63A320036D1EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,11 +77,7 @@
 		C8A82C0A23A63A320036D1EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8A82C0C23A63A320036D1EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8A82C1123A63A330036D1EC /* DiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8A82C1523A63A330036D1EC /* DiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceTests.swift; sourceTree = "<group>"; };
-		C8A82C1723A63A330036D1EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8A82C1C23A63A330036D1EC /* DiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8A82C2023A63A330036D1EC /* DiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceUITests.swift; sourceTree = "<group>"; };
-		C8A82C2223A63A330036D1EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,19 +88,14 @@
 				C882471223BF445B00F1FB02 /* EventKitUI.framework in Frameworks */,
 				C882471323BF445B00F1FB02 /* EventKit.framework in Frameworks */,
 				C882470E23BF445200F1FB02 /* CoreGraphics.framework in Frameworks */,
-				C882472923BF455700F1FB02 /* GoogleUtilities.framework in Frameworks */,
-				C882472D23BF46B200F1FB02 /* libADBERT_AD_SDK.a in Frameworks */,
 				C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */,
-				C882472523BF455700F1FB02 /* GoogleAppMeasurement.framework in Frameworks */,
 				C882470F23BF445200F1FB02 /* CoreTelephony.framework in Frameworks */,
 				C882470D23BF445200F1FB02 /* CoreLocation.framework in Frameworks */,
 				C882471523BF446700F1FB02 /* MessageUI.framework in Frameworks */,
-				C882472A23BF455700F1FB02 /* nanopb.framework in Frameworks */,
 				C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */,
 				C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */,
 				C882471923BF447900F1FB02 /* SystemConfiguration.framework in Frameworks */,
 				C882471B23BF447D00F1FB02 /* WebKit.framework in Frameworks */,
-				C882472B23BF455700F1FB02 /* GoogleMobileAds.framework in Frameworks */,
 				C882471723BF446E00F1FB02 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,37 +158,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C882471C23BF455700F1FB02 /* GoogleMobileAdsSdkiOS-7.53.1 */ = {
-			isa = PBXGroup;
-			children = (
-				C882471D23BF455700F1FB02 /* GoogleAppMeasurement.framework */,
-				C882471E23BF455700F1FB02 /* Licenses */,
-				C882472223BF455700F1FB02 /* GoogleUtilities.framework */,
-				C882472323BF455700F1FB02 /* nanopb.framework */,
-				C882472423BF455700F1FB02 /* GoogleMobileAds.framework */,
-			);
-			path = "GoogleMobileAdsSdkiOS-7.53.1";
-			sourceTree = "<group>";
-		};
-		C882471E23BF455700F1FB02 /* Licenses */ = {
-			isa = PBXGroup;
-			children = (
-				C882471F23BF455700F1FB02 /* NanoPB-LICENSE */,
-				C882472023BF455700F1FB02 /* OpenMeasurement-LICENSE */,
-				C882472123BF455700F1FB02 /* GoogleUtilities-LICENSE */,
-			);
-			path = Licenses;
-			sourceTree = "<group>";
-		};
 		C8A82BF223A63A320036D1EC = {
 			isa = PBXGroup;
 			children = (
 				C8A82BFD23A63A320036D1EC /* Dice */,
-				C8A82C1423A63A330036D1EC /* DiceTests */,
-				C8A82C1F23A63A330036D1EC /* DiceUITests */,
 				C8A82BFC23A63A320036D1EC /* Products */,
 				C882470323BF443700F1FB02 /* Frameworks */,
-				C882471C23BF455700F1FB02 /* GoogleMobileAdsSdkiOS-7.53.1 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,8 +180,6 @@
 		C8A82BFD23A63A320036D1EC /* Dice */ = {
 			isa = PBXGroup;
 			children = (
-				C882470223BF43C900F1FB02 /* Header.h */,
-				C882472C23BF46B200F1FB02 /* libADBERT_AD_SDK.a */,
 				C88246F723BF43A800F1FB02 /* include */,
 				C8A82BFE23A63A320036D1EC /* AppDelegate.swift */,
 				C8A82C0023A63A320036D1EC /* SceneDelegate.swift */,
@@ -247,24 +192,6 @@
 				C873B75323C0A18D00E2FF97 /* Dice.mp4 */,
 			);
 			path = Dice;
-			sourceTree = "<group>";
-		};
-		C8A82C1423A63A330036D1EC /* DiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				C8A82C1523A63A330036D1EC /* DiceTests.swift */,
-				C8A82C1723A63A330036D1EC /* Info.plist */,
-			);
-			path = DiceTests;
-			sourceTree = "<group>";
-		};
-		C8A82C1F23A63A330036D1EC /* DiceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C8A82C2023A63A330036D1EC /* DiceUITests.swift */,
-				C8A82C2223A63A330036D1EC /* Info.plist */,
-			);
-			path = DiceUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,9 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C873B75423C0A18E00E2FF97 /* Dice.mp4 in Resources */,
-				C882472823BF455700F1FB02 /* GoogleUtilities-LICENSE in Resources */,
-				C882472723BF455700F1FB02 /* OpenMeasurement-LICENSE in Resources */,
-				C882472623BF455700F1FB02 /* NanoPB-LICENSE in Resources */,
 				C8A82C0B23A63A320036D1EC /* LaunchScreen.storyboard in Resources */,
 				C8A82C0823A63A320036D1EC /* Assets.xcassets in Resources */,
 				C8A82C0623A63A320036D1EC /* Main.storyboard in Resources */,
@@ -413,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8A82C1623A63A330036D1EC /* DiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8A82C2123A63A330036D1EC /* DiceUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,10 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X544A9LTF;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.53.1",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Dice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -599,7 +518,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -611,10 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X544A9LTF;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.53.1",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Dice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -630,7 +547,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
