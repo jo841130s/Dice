@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C873B74E23C0981A00E2FF97 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873B74D23C0981A00E2FF97 /* GIF.swift */; };
 		C873B75423C0A18E00E2FF97 /* Dice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C873B75323C0A18D00E2FF97 /* Dice.mp4 */; };
+		C878F5D923FCEF9000392D25 /* AdbertSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C878F5D823FCEF8F00392D25 /* AdbertSDK.a */; };
+		C878F5DC23FCF02C00392D25 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C878F5DB23FCF02B00392D25 /* GoogleMobileAds.framework */; };
 		C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470423BF443800F1FB02 /* AdSupport.framework */; };
 		C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470623BF444200F1FB02 /* AudioToolbox.framework */; };
 		C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470823BF444900F1FB02 /* AVFoundation.framework */; };
@@ -18,7 +20,6 @@
 		C882471223BF445B00F1FB02 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471023BF445A00F1FB02 /* EventKitUI.framework */; };
 		C882471323BF445B00F1FB02 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471123BF445A00F1FB02 /* EventKit.framework */; };
 		C882471523BF446700F1FB02 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471423BF446700F1FB02 /* MessageUI.framework */; };
-		C882471723BF446E00F1FB02 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471623BF446E00F1FB02 /* StoreKit.framework */; };
 		C882471923BF447900F1FB02 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471823BF447900F1FB02 /* SystemConfiguration.framework */; };
 		C882471B23BF447D00F1FB02 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471A23BF447D00F1FB02 /* WebKit.framework */; };
 		C8A82BFF23A63A320036D1EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82BFE23A63A320036D1EC /* AppDelegate.swift */; };
@@ -49,13 +50,16 @@
 /* Begin PBXFileReference section */
 		C873B74D23C0981A00E2FF97 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
 		C873B75323C0A18D00E2FF97 /* Dice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dice.mp4; sourceTree = "<group>"; };
-		C88246F923BF43A800F1FB02 /* AdbertADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADInterstitial.h; sourceTree = "<group>"; };
-		C88246FA23BF43A800F1FB02 /* AdbertADBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADBannerDelegate.h; sourceTree = "<group>"; };
-		C88246FB23BF43A800F1FB02 /* ADBERT_AD_SDK_Maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBERT_AD_SDK_Maker.h; sourceTree = "<group>"; };
-		C88246FC23BF43A800F1FB02 /* AdbertADNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADNative.h; sourceTree = "<group>"; };
-		C88246FD23BF43A800F1FB02 /* AdbertADInterstitalDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADInterstitalDelegate.h; sourceTree = "<group>"; };
-		C88246FE23BF43A800F1FB02 /* AdbertADBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADBanner.h; sourceTree = "<group>"; };
-		C88246FF23BF43A800F1FB02 /* AdbertADNativeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADNativeDelegate.h; sourceTree = "<group>"; };
+		C878F5D123FCEF8F00392D25 /* AdbertADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADInterstitial.h; sourceTree = "<group>"; };
+		C878F5D223FCEF8F00392D25 /* AdbertADBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADBannerDelegate.h; sourceTree = "<group>"; };
+		C878F5D323FCEF8F00392D25 /* AdbertADNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADNative.h; sourceTree = "<group>"; };
+		C878F5D423FCEF8F00392D25 /* AdbertADInterstitalDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADInterstitalDelegate.h; sourceTree = "<group>"; };
+		C878F5D523FCEF8F00392D25 /* AdbertADBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADBanner.h; sourceTree = "<group>"; };
+		C878F5D623FCEF8F00392D25 /* Adbert_iOS_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adbert_iOS_SDK.h; sourceTree = "<group>"; };
+		C878F5D723FCEF8F00392D25 /* AdbertADNativeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdbertADNativeDelegate.h; sourceTree = "<group>"; };
+		C878F5D823FCEF8F00392D25 /* AdbertSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdbertSDK.a; sourceTree = "<group>"; };
+		C878F5DA23FCEFD100392D25 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		C878F5DB23FCF02B00392D25 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		C882470423BF443800F1FB02 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C882470623BF444200F1FB02 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C882470823BF444900F1FB02 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -65,7 +69,6 @@
 		C882471023BF445A00F1FB02 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		C882471123BF445A00F1FB02 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		C882471423BF446700F1FB02 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C882471623BF446E00F1FB02 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C882471823BF447900F1FB02 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C882471A23BF447D00F1FB02 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C8A82BFB23A63A320036D1EC /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,12 +94,13 @@
 				C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */,
 				C882470F23BF445200F1FB02 /* CoreTelephony.framework in Frameworks */,
 				C882470D23BF445200F1FB02 /* CoreLocation.framework in Frameworks */,
+				C878F5D923FCEF9000392D25 /* AdbertSDK.a in Frameworks */,
 				C882471523BF446700F1FB02 /* MessageUI.framework in Frameworks */,
 				C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */,
 				C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */,
 				C882471923BF447900F1FB02 /* SystemConfiguration.framework in Frameworks */,
 				C882471B23BF447D00F1FB02 /* WebKit.framework in Frameworks */,
-				C882471723BF446E00F1FB02 /* StoreKit.framework in Frameworks */,
+				C878F5DC23FCF02C00392D25 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,26 +121,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C88246F723BF43A800F1FB02 /* include */ = {
+		C878F5CE23FCEF8F00392D25 /* Adbert_iOS_SDK */ = {
 			isa = PBXGroup;
 			children = (
-				C88246F823BF43A800F1FB02 /* ADBERT_AD_SDK */,
+				C878F5CF23FCEF8F00392D25 /* include */,
+				C878F5D823FCEF8F00392D25 /* AdbertSDK.a */,
+			);
+			path = Adbert_iOS_SDK;
+			sourceTree = "<group>";
+		};
+		C878F5CF23FCEF8F00392D25 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C878F5D023FCEF8F00392D25 /* Adbert_iOS_SDK */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		C88246F823BF43A800F1FB02 /* ADBERT_AD_SDK */ = {
+		C878F5D023FCEF8F00392D25 /* Adbert_iOS_SDK */ = {
 			isa = PBXGroup;
 			children = (
-				C88246F923BF43A800F1FB02 /* AdbertADInterstitial.h */,
-				C88246FA23BF43A800F1FB02 /* AdbertADBannerDelegate.h */,
-				C88246FB23BF43A800F1FB02 /* ADBERT_AD_SDK_Maker.h */,
-				C88246FC23BF43A800F1FB02 /* AdbertADNative.h */,
-				C88246FD23BF43A800F1FB02 /* AdbertADInterstitalDelegate.h */,
-				C88246FE23BF43A800F1FB02 /* AdbertADBanner.h */,
-				C88246FF23BF43A800F1FB02 /* AdbertADNativeDelegate.h */,
+				C878F5D123FCEF8F00392D25 /* AdbertADInterstitial.h */,
+				C878F5D223FCEF8F00392D25 /* AdbertADBannerDelegate.h */,
+				C878F5D323FCEF8F00392D25 /* AdbertADNative.h */,
+				C878F5D423FCEF8F00392D25 /* AdbertADInterstitalDelegate.h */,
+				C878F5D523FCEF8F00392D25 /* AdbertADBanner.h */,
+				C878F5D623FCEF8F00392D25 /* Adbert_iOS_SDK.h */,
+				C878F5D723FCEF8F00392D25 /* AdbertADNativeDelegate.h */,
 			);
-			path = ADBERT_AD_SDK;
+			path = Adbert_iOS_SDK;
 			sourceTree = "<group>";
 		};
 		C882470323BF443700F1FB02 /* Frameworks */ = {
@@ -144,7 +157,6 @@
 			children = (
 				C882471A23BF447D00F1FB02 /* WebKit.framework */,
 				C882471823BF447900F1FB02 /* SystemConfiguration.framework */,
-				C882471623BF446E00F1FB02 /* StoreKit.framework */,
 				C882471423BF446700F1FB02 /* MessageUI.framework */,
 				C882471123BF445A00F1FB02 /* EventKit.framework */,
 				C882471023BF445A00F1FB02 /* EventKitUI.framework */,
@@ -180,7 +192,7 @@
 		C8A82BFD23A63A320036D1EC /* Dice */ = {
 			isa = PBXGroup;
 			children = (
-				C88246F723BF43A800F1FB02 /* include */,
+				C878F5CE23FCEF8F00392D25 /* Adbert_iOS_SDK */,
 				C8A82BFE23A63A320036D1EC /* AppDelegate.swift */,
 				C8A82C0023A63A320036D1EC /* SceneDelegate.swift */,
 				C8A82C0223A63A320036D1EC /* ViewController.swift */,
@@ -190,6 +202,8 @@
 				C8A82C0C23A63A320036D1EC /* Info.plist */,
 				C873B74D23C0981A00E2FF97 /* GIF.swift */,
 				C873B75323C0A18D00E2FF97 /* Dice.mp4 */,
+				C878F5DA23FCEFD100392D25 /* Header.h */,
+				C878F5DB23FCF02B00392D25 /* GoogleMobileAds.framework */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -502,7 +516,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X544A9LTF;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dice",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Dice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -514,12 +531,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Dice",
+					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -531,7 +549,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X544A9LTF;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dice",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Dice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -543,12 +564,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Dice",
+					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

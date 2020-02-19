@@ -10,7 +10,7 @@ import UIKit
 import AudioToolbox
 import AVKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, AdbertADBannerDelegate {
     
     var timer : Timer?
     @IBOutlet weak var centerView: UIView!
@@ -19,6 +19,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var upLabel: UILabel!
     @IBOutlet weak var doenLabel: UILabel!
     var blackView = UIView()
+    var banner : AdbertADBanner!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -38,6 +39,12 @@ class ViewController: UIViewController{
         diceImageView.image = UIImage(named: "1")
         diceImageView.clipsToBounds = true
         diceImageView.layer.cornerRadius = 20
+        banner = AdbertADBanner(appid: "ad-adb-18e46e12d521", andAPPKEY: "a961268138235")
+        banner.delegate = self
+        banner.fullScreenBanner = false
+        banner.adSize = CGSize(width: 320, height: 50)
+        banner.frame = CGRect(x:0, y:0, width:320, height:50)
+        banner.requestAD()
     }
     
     func changeBackgroundColor() {
@@ -90,6 +97,18 @@ class ViewController: UIViewController{
     func diceLayout(number:Int) {
         diceImageView.image = UIImage(named:"\(number)")
     }
+    
+    func adbertADViewDidReceiveAd(_ banner: AdbertADBanner!) {
+         print("receive")
+     }
+    
+     func adbertADView(_ banner: AdbertADBanner!, didFailToReceiveAdWithError error: Error!) {
+         print("Adbert Ad did fail to receive")
+     }
+    
+     func adbertADViewDidClicked(_ banner: AdbertADBanner!) {
+         print("Adbert Ad did clicked")
+     }
     
 }
 
