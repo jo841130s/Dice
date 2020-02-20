@@ -34,7 +34,7 @@ class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADIntersti
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        interstitial = AdbertADInterstitial(appid: "", andAPPKEY: "")
+        interstitial = AdbertADInterstitial(appid: "ad-adb-18e46e12d521", andAPPKEY: "a961272176511")
         interstitial.adPresentViewController = self
         interstitial.delegate = self
         interstitial.requestAD()
@@ -187,6 +187,33 @@ class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADIntersti
     
     func adbertADInterstitial(_ interstitial: AdbertADInterstitial!, didFailToReceiveAdWithError error: Error!) {
         print("Interstitial Fail")
+    }
+    func adbertInterstitialDidAppear(_ interstitial: AdbertADInterstitial!) {
+        print("")
+    }
+    
+    func adbertInterstitialWillAppear(_ interstitial: AdbertADInterstitial!) {
+        print("")
+    }
+    
+    func adbertInterstitialDidExpire(_ interstitial: AdbertADInterstitial!) {
+        print("")
+    }
+    
+    func adbertInterstitialDidClicked(_ interstitial: AdbertADInterstitial!) {
+        print("")
+    }
+    
+    func adbertInterstitialDidDisappear(_ interstitial: AdbertADInterstitial!) {
+        print("")
+    }
+    
+    func adbertInterstitialWillDisappear(_ interstitial: AdbertADInterstitial!) {
+        print("")
+    }
+    
+    func adbertInterstitialDidReceiveTapEvent(_ interstitial: AdbertADInterstitial!) {
+        print("")
     }
 }
 

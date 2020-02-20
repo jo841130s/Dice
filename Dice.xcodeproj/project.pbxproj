@@ -23,7 +23,6 @@
 		C882471923BF447900F1FB02 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471823BF447900F1FB02 /* SystemConfiguration.framework */; };
 		C882471B23BF447D00F1FB02 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882471A23BF447D00F1FB02 /* WebKit.framework */; };
 		C8A82BFF23A63A320036D1EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82BFE23A63A320036D1EC /* AppDelegate.swift */; };
-		C8A82C0123A63A320036D1EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82C0023A63A320036D1EC /* SceneDelegate.swift */; };
 		C8A82C0323A63A320036D1EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A82C0223A63A320036D1EC /* ViewController.swift */; };
 		C8A82C0623A63A320036D1EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A82C0423A63A320036D1EC /* Main.storyboard */; };
 		C8A82C0823A63A320036D1EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8A82C0723A63A320036D1EC /* Assets.xcassets */; };
@@ -73,7 +72,6 @@
 		C882471A23BF447D00F1FB02 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C8A82BFB23A63A320036D1EC /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A82BFE23A63A320036D1EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8A82C0023A63A320036D1EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C8A82C0223A63A320036D1EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8A82C0523A63A320036D1EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8A82C0723A63A320036D1EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			children = (
 				C878F5CE23FCEF8F00392D25 /* Adbert_iOS_SDK */,
 				C8A82BFE23A63A320036D1EC /* AppDelegate.swift */,
-				C8A82C0023A63A320036D1EC /* SceneDelegate.swift */,
 				C8A82C0223A63A320036D1EC /* ViewController.swift */,
 				C8A82C0423A63A320036D1EC /* Main.storyboard */,
 				C8A82C0723A63A320036D1EC /* Assets.xcassets */,
@@ -343,7 +340,6 @@
 				C8A82C0323A63A320036D1EC /* ViewController.swift in Sources */,
 				C8A82BFF23A63A320036D1EC /* AppDelegate.swift in Sources */,
 				C873B74E23C0981A00E2FF97 /* GIF.swift in Sources */,
-				C8A82C0123A63A320036D1EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +535,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -572,7 +568,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/jo/Desktop/Dice/Dice/Header.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

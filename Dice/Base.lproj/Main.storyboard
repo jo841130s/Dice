@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-U8-dRz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="154"/>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-U8-dRz">
+                                <rect key="frame" x="0.0" y="94" width="414" height="104"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake To Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mW8-Xp-QgZ">
-                                        <rect key="frame" x="55" y="46.5" width="304.5" height="61"/>
+                                        <rect key="frame" x="56.5" y="23" width="301.5" height="58"/>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="shadowOffset" width="3" height="3"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="mW8-Xp-QgZ" firstAttribute="centerY" secondItem="m5z-U8-dRz" secondAttribute="centerY" id="90T-ft-vLZ"/>
                                     <constraint firstItem="mW8-Xp-QgZ" firstAttribute="centerX" secondItem="m5z-U8-dRz" secondAttribute="centerX" id="HYf-ud-j4T"/>
@@ -205,7 +205,7 @@
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0So-kr-X95"/>
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Rc-2G-PXj"/>
                             <constraint firstItem="m5z-U8-dRz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Isv-KY-HRr"/>
-                            <constraint firstItem="m5z-U8-dRz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KXk-xZ-gAz"/>
+                            <constraint firstItem="m5z-U8-dRz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="KXk-xZ-gAz"/>
                             <constraint firstItem="kfQ-3k-ovP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N3B-co-UM7"/>
                             <constraint firstItem="uUV-if-t50" firstAttribute="top" secondItem="kfQ-3k-ovP" secondAttribute="bottom" id="Pg4-n6-Lpy"/>
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="top" secondItem="m5z-U8-dRz" secondAttribute="bottom" id="RmV-y6-atn"/>
