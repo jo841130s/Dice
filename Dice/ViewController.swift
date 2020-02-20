@@ -10,10 +10,8 @@ import UIKit
 import AudioToolbox
 import AVKit
 
-class ViewController: UIViewController, AdbertADBannerDelegate {
-    
-    var timer : Timer?
-    
+class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADInterstitalDelegate {
+
     @IBOutlet weak var diceView1: UIView!
     @IBOutlet weak var diceView2: UIView!
     @IBOutlet weak var diceView3: UIView!
@@ -29,48 +27,37 @@ class ViewController: UIViewController, AdbertADBannerDelegate {
     @IBOutlet weak var bannerView: UIView!
     var blackView = UIView()
     var banner : AdbertADBanner!
+    var interstitial : AdbertADInterstitial!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        diceView1.layer.borderWidth = 10
-        diceView1.layer.borderColor = UIColor.black.cgColor
-        diceView1.layer.cornerRadius = 20
-        diceView1.isHidden = true
-        diceView2.layer.borderWidth = 10
-        diceView2.layer.borderColor = UIColor.black.cgColor
-        diceView2.layer.cornerRadius = 20
-        diceView2.isHidden = true
-        diceView3.layer.borderWidth = 10
-        diceView3.layer.borderColor = UIColor.black.cgColor
-        diceView3.layer.cornerRadius = 20
-        diceView4.layer.borderWidth = 10
-        diceView4.layer.borderColor = UIColor.black.cgColor
-        diceView4.layer.cornerRadius = 20
-        diceView4.isHidden = true
-        diceView5.layer.borderWidth = 10
-        diceView5.layer.borderColor = UIColor.black.cgColor
-        diceView5.layer.cornerRadius = 20
-        diceView5.isHidden = true
-        view.backgroundColor = UIColor.gray
+        interstitial = AdbertADInterstitial(appid: "", andAPPKEY: "")
+        interstitial.adPresentViewController = self
+        interstitial.delegate = self
+        interstitial.requestAD()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        diceViewSetup(view: diceView1)
+        diceViewSetup(view: diceView2)
+        diceViewSetup(view: diceView3)
+        diceViewSetup(view: diceView4)
+        diceViewSetup(view: diceView5)
+        diceView1.isHidden = true
+        diceView2.isHidden = true
+        diceView4.isHidden = true
+        diceView5.isHidden = true
         view.backgroundColor = getRandomColor()
-        dice1.clipsToBounds = true
-        dice1.layer.cornerRadius = 20
-        dice2.clipsToBounds = true
-        dice2.layer.cornerRadius = 20
-        dice3.clipsToBounds = true
-        dice3.layer.cornerRadius = 20
-        dice4.clipsToBounds = true
-        dice4.layer.cornerRadius = 20
-        dice5.clipsToBounds = true
-        dice5.layer.cornerRadius = 20
+        diceImageSetup(image: dice1)
+        diceImageSetup(image: dice2)
+        diceImageSetup(image: dice3)
+        diceImageSetup(image: dice4)
+        diceImageSetup(image: dice5)
         banner = AdbertADBanner(appid: "ad-adb-18e46e12d521", andAPPKEY: "a961268138235")
         banner.delegate = self
         banner.fullScreenBanner = false
@@ -181,6 +168,25 @@ class ViewController: UIViewController, AdbertADBannerDelegate {
             diceView4.isHidden = false
             diceView5.isHidden = false
         }
+    }
+    
+    func diceViewSetup(view:UIView) {
+        view.layer.borderWidth = 10
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.cornerRadius = 20
+    }
+    
+    func diceImageSetup(image:UIImageView) {
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 20
+    }
+    
+    func adbertADInterstitialDidReceiveAd(_ interstital: AdbertADInterstitial!) {
+        interstitial.showAD()
+    }
+    
+    func adbertADInterstitial(_ interstitial: AdbertADInterstitial!, didFailToReceiveAdWithError error: Error!) {
+        print("Interstitial Fail")
     }
 }
 
