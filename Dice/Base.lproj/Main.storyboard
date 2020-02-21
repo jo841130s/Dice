@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-U8-dRz">
-                                <rect key="frame" x="0.0" y="94" width="414" height="104"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="68"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake To Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mW8-Xp-QgZ">
-                                        <rect key="frame" x="56.5" y="23" width="301.5" height="58"/>
+                                        <rect key="frame" x="56.333333333333343" y="5" width="301.33333333333326" height="58"/>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="50"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,10 +34,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfQ-3k-ovP">
-                                <rect key="frame" x="0.0" y="698" width="414" height="83.5"/>
+                                <rect key="frame" x="0.0" y="618" width="414" height="43.333333333333371"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EOx-iR-Nfl">
-                                        <rect key="frame" x="40" y="26" width="334" height="32"/>
+                                        <rect key="frame" x="40" y="0.0" width="334" height="32"/>
                                         <segments>
                                             <segment title="1"/>
                                             <segment title="2"/>
@@ -51,23 +51,22 @@
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="EOx-iR-Nfl" firstAttribute="centerY" secondItem="kfQ-3k-ovP" secondAttribute="centerY" id="d4e-2H-maQ"/>
-                                    <constraint firstItem="EOx-iR-Nfl" firstAttribute="centerX" secondItem="kfQ-3k-ovP" secondAttribute="centerX" id="fQg-Vm-tG1"/>
+                                    <constraint firstItem="EOx-iR-Nfl" firstAttribute="top" secondItem="kfQ-3k-ovP" secondAttribute="top" id="e61-vW-MjL"/>
                                     <constraint firstAttribute="trailing" secondItem="EOx-iR-Nfl" secondAttribute="trailing" constant="40" id="rqm-rg-0DW"/>
                                     <constraint firstItem="EOx-iR-Nfl" firstAttribute="leading" secondItem="kfQ-3k-ovP" secondAttribute="leading" constant="40" id="zj2-Gl-6mS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjn-yX-vy9">
-                                <rect key="frame" x="0.0" y="198" width="414" height="500"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrs-4c-j4E">
-                                        <rect key="frame" x="20" y="187.5" width="374" height="125"/>
+                                        <rect key="frame" x="20" y="187.66666666666669" width="374" height="124.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0o-Cs-MuT">
-                                                <rect key="frame" x="124.5" y="0.0" width="125" height="125"/>
+                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="124.66666666666667"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="63v-pS-pOc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="124.66666666666667"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -88,13 +87,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-pc-Jso">
-                                        <rect key="frame" x="20" y="33" width="374" height="124.5"/>
+                                        <rect key="frame" x="20" y="33.000000000000007" width="374" height="124.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1e5-bU-gMp">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="124.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="124.66666666666667"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="CUy-Q0-iwd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="124.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="124.66666666666667"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -107,10 +106,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alE-Li-xXB">
-                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="124.5"/>
+                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="124.66666666666667"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="i7G-0J-xLN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="124.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="124.66666666666667"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -133,13 +132,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSi-AZ-JLt">
-                                        <rect key="frame" x="20" y="342.5" width="374" height="124.5"/>
+                                        <rect key="frame" x="20" y="342.33333333333331" width="374" height="124.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgV-gF-v23">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="124.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="124.66666666666667"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="03s-ku-6Bl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="124.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="124.66666666666667"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -152,10 +151,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5by-vs-ZGe">
-                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="124.5"/>
+                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="124.66666666666667"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-t1-1ld">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="124.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="124.66666666666667"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -194,7 +193,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUV-if-t50">
-                                <rect key="frame" x="0.0" y="781.5" width="414" height="64.5"/>
+                                <rect key="frame" x="0.0" y="661.33333333333337" width="414" height="64.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uUV-if-t50" secondAttribute="height" multiplier="640:100" id="vlN-hz-vzr"/>
                                 </constraints>
@@ -204,13 +203,14 @@
                         <constraints>
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0So-kr-X95"/>
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Rc-2G-PXj"/>
+                            <constraint firstItem="kfQ-3k-ovP" firstAttribute="top" secondItem="kjn-yX-vy9" secondAttribute="bottom" id="F70-0n-uQf"/>
                             <constraint firstItem="m5z-U8-dRz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Isv-KY-HRr"/>
                             <constraint firstItem="m5z-U8-dRz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="KXk-xZ-gAz"/>
                             <constraint firstItem="kfQ-3k-ovP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N3B-co-UM7"/>
                             <constraint firstItem="uUV-if-t50" firstAttribute="top" secondItem="kfQ-3k-ovP" secondAttribute="bottom" id="Pg4-n6-Lpy"/>
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="top" secondItem="m5z-U8-dRz" secondAttribute="bottom" id="RmV-y6-atn"/>
                             <constraint firstItem="kfQ-3k-ovP" firstAttribute="top" secondItem="kjn-yX-vy9" secondAttribute="bottom" id="WBo-qj-amQ"/>
-                            <constraint firstAttribute="bottom" secondItem="uUV-if-t50" secondAttribute="bottom" constant="50" id="YXT-A7-pBW"/>
+                            <constraint firstAttribute="bottom" secondItem="uUV-if-t50" secondAttribute="bottom" constant="10" id="YXT-A7-pBW"/>
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kgX-u9-xHF"/>
                             <constraint firstItem="uUV-if-t50" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nQu-e7-jak"/>
                             <constraint firstItem="kjn-yX-vy9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rNA-jH-SFu"/>

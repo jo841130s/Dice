@@ -512,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X544A9LTF;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dice",
@@ -529,6 +530,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
+				MARKETING_VERSION = 3.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X544A9LTF;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dice",
@@ -562,6 +565,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
+				MARKETING_VERSION = 3.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = joe.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
