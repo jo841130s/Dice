@@ -18,6 +18,8 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-4893868639954563/1279400530</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
 	<key>LSRequiresIPhoneOS</key>

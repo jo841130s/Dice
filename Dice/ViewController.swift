@@ -9,8 +9,9 @@
 import UIKit
 import AudioToolbox
 import AVKit
+import GoogleMobileAds
 
-class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADInterstitalDelegate {
+class ViewController: UIViewController, GADInterstitialDelegate {
 
     @IBOutlet weak var diceView1: UIView!
     @IBOutlet weak var diceView2: UIView!
@@ -22,51 +23,48 @@ class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADIntersti
     @IBOutlet weak var dice3: UIImageView!
     @IBOutlet weak var dice4: UIImageView!
     @IBOutlet weak var dice5: UIImageView!
-    @IBOutlet weak var centerView: UIView!
-    @IBOutlet weak var upLabel: UILabel!
-    @IBOutlet weak var bannerView: UIView!
+    @IBOutlet var rollButton: UIButton!
+    
+    var interstitial : GADInterstitial!
+    
     var blackView = UIView()
-    var banner : AdbertADBanner!
-    var interstitial : AdbertADInterstitial!
+    var rollDiceTimes = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        interstitial = AdbertADInterstitial(appid: "ad-adb-18e46e12d521", andAPPKEY: "a961272176511")
-        interstitial.adPresentViewController = self
-        interstitial.delegate = self
-        interstitial.requestAD()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        diceViewSetup(view: diceView1)
-        diceViewSetup(view: diceView2)
-        diceViewSetup(view: diceView3)
-        diceViewSetup(view: diceView4)
-        diceViewSetup(view: diceView5)
-        diceView1.isHidden = true
-        diceView2.isHidden = true
-        diceView4.isHidden = true
-        diceView5.isHidden = true
+        rollButton.layer.cornerRadius = 10
+        interstitial = loadInterstitial()
+        dice1.isHidden = true
+        dice2.isHidden = true
+        dice4.isHidden = true
+        dice5.isHidden = true
         view.backgroundColor = getRandomColor()
         diceImageSetup(image: dice1)
         diceImageSetup(image: dice2)
         diceImageSetup(image: dice3)
         diceImageSetup(image: dice4)
         diceImageSetup(image: dice5)
-        banner = AdbertADBanner(appid: "ad-adb-18e46e12d521", andAPPKEY: "a961268138235")
-        banner.delegate = self
-        banner.fullScreenBanner = false
-        banner.adSize = CGSize(width: 320, height: 50)
-        banner.frame = CGRect(x:(UIScreen.main.bounds.width - banner.adSize.width)/2, y:0, width:320, height:50)
-        banner.requestAD()
     }
     
+    func loadInterstitial() -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4893868639954563/1279400530")
+        interstitial.delegate = self
+        let request = GADRequest()
+        interstitial.load(request)
+        return interstitial
+    }
     
+    @IBAction func rollButtonPressed(_ sender: Any) {
+        rollDice()
+    }
     
     func getRandomColor() -> UIColor {
         let red   = CGFloat((arc4random() % 256)) / 255.0
@@ -78,20 +76,29 @@ class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADIntersti
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            rollingAnimation()
-            let number1 = Int.random(in: 1 ..< 7)
-            let number2 = Int.random(in: 1 ..< 7)
-            let number3 = Int.random(in: 1 ..< 7)
-            let number4 = Int.random(in: 1 ..< 7)
-            let number5 = Int.random(in: 1 ..< 7)
-            diceLayout(number: number1, dice: dice1)
-            diceLayout(number: number2, dice: dice2)
-            diceLayout(number: number3, dice: dice3)
-            diceLayout(number: number4, dice: dice4)
-            diceLayout(number: number5, dice: dice5)
-            view.backgroundColor = getRandomColor()
+            rollDice()
         }
+    }
+    
+    func rollDice() {
+        if rollDiceTimes >= Int.random(in: 5...8) {
+            rollDiceTimes = 0
+            interstitial = loadInterstitial()
+        }
+        rollDiceTimes += 1
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        rollingAnimation()
+        let number1 = Int.random(in: 1 ..< 7)
+        let number2 = Int.random(in: 1 ..< 7)
+        let number3 = Int.random(in: 1 ..< 7)
+        let number4 = Int.random(in: 1 ..< 7)
+        let number5 = Int.random(in: 1 ..< 7)
+        diceLayout(number: number1, dice: dice1)
+        diceLayout(number: number2, dice: dice2)
+        diceLayout(number: number3, dice: dice3)
+        diceLayout(number: number4, dice: dice4)
+        diceLayout(number: number5, dice: dice5)
+        view.backgroundColor = getRandomColor()
     }
     
     func rollingAnimation() {
@@ -121,52 +128,37 @@ class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADIntersti
         dice.image = UIImage(named:"\(number)")
     }
     
-    func adbertADViewDidReceiveAd(_ banner: AdbertADBanner!) {
-        print("receive")
-        bannerView.addSubview(banner)
-        banner.showAD()
-        
-     }
-    
-     func adbertADView(_ banner: AdbertADBanner!, didFailToReceiveAdWithError error: Error!) {
-        print("Adbert Ad did fail to receive")
-     }
-    
-     func adbertADViewDidClicked(_ banner: AdbertADBanner!) {
-        print("Adbert Ad did clicked")
-     }
-    
     @IBAction func diceNumberControl(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            diceView1.isHidden = true
-            diceView2.isHidden = true
-            diceView3.isHidden = false
-            diceView4.isHidden = true
-            diceView5.isHidden = true
+            dice1.isHidden = true
+            dice2.isHidden = true
+            dice3.isHidden = false
+            dice4.isHidden = true
+            dice5.isHidden = true
         } else if sender.selectedSegmentIndex == 1 {
-            diceView1.isHidden = false
-            diceView2.isHidden = true
-            diceView3.isHidden = true
-            diceView4.isHidden = true
-            diceView5.isHidden = false
+            dice1.isHidden = false
+            dice2.isHidden = true
+            dice3.isHidden = true
+            dice4.isHidden = true
+            dice5.isHidden = false
         } else if sender.selectedSegmentIndex == 2 {
-            diceView1.isHidden = false
-            diceView2.isHidden = true
-            diceView3.isHidden = false
-            diceView4.isHidden = true
-            diceView5.isHidden = false
+            dice1.isHidden = false
+            dice2.isHidden = true
+            dice3.isHidden = false
+            dice4.isHidden = true
+            dice5.isHidden = false
         } else if sender.selectedSegmentIndex == 3 {
-            diceView1.isHidden = false
-            diceView2.isHidden = false
-            diceView3.isHidden = true
-            diceView4.isHidden = false
-            diceView5.isHidden = false
+            dice1.isHidden = false
+            dice2.isHidden = false
+            dice3.isHidden = true
+            dice4.isHidden = false
+            dice5.isHidden = false
         } else if sender.selectedSegmentIndex == 4 {
-            diceView1.isHidden = false
-            diceView2.isHidden = false
-            diceView3.isHidden = false
-            diceView4.isHidden = false
-            diceView5.isHidden = false
+            dice1.isHidden = false
+            dice2.isHidden = false
+            dice3.isHidden = false
+            dice4.isHidden = false
+            dice5.isHidden = false
         }
     }
     
@@ -181,39 +173,41 @@ class ViewController: UIViewController, AdbertADBannerDelegate, AdbertADIntersti
         image.layer.cornerRadius = 20
     }
     
-    func adbertADInterstitialDidReceiveAd(_ interstital: AdbertADInterstitial!) {
-        interstitial.showAD()
+    /// Tells the delegate an ad request succeeded.
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("interstitialDidReceiveAd")
+        if ad.isReady {
+          ad.present(fromRootViewController: self)
+        } else {
+          print("Ad wasn't ready")
+        }
+    }
+
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    /// Tells the delegate that an interstitial will be presented.
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+        print("interstitialWillPresentScreen")
+    }
+
+    /// Tells the delegate the interstitial is to be animated off the screen.
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialWillDismissScreen")
+    }
+
+    /// Tells the delegate the interstitial had been animated off the screen.
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialDidDismissScreen")
+    }
+
+    /// Tells the delegate that a user click will open another app
+    /// (such as the App Store), backgrounding the current app.
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        print("interstitialWillLeaveApplication")
     }
     
-    func adbertADInterstitial(_ interstitial: AdbertADInterstitial!, didFailToReceiveAdWithError error: Error!) {
-        print("Interstitial Fail")
-    }
-    func adbertInterstitialDidAppear(_ interstitial: AdbertADInterstitial!) {
-        print("")
-    }
-    
-    func adbertInterstitialWillAppear(_ interstitial: AdbertADInterstitial!) {
-        print("")
-    }
-    
-    func adbertInterstitialDidExpire(_ interstitial: AdbertADInterstitial!) {
-        print("")
-    }
-    
-    func adbertInterstitialDidClicked(_ interstitial: AdbertADInterstitial!) {
-        print("")
-    }
-    
-    func adbertInterstitialDidDisappear(_ interstitial: AdbertADInterstitial!) {
-        print("")
-    }
-    
-    func adbertInterstitialWillDisappear(_ interstitial: AdbertADInterstitial!) {
-        print("")
-    }
-    
-    func adbertInterstitialDidReceiveTapEvent(_ interstitial: AdbertADInterstitial!) {
-        print("")
-    }
 }
 
