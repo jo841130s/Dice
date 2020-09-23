@@ -29,6 +29,8 @@ class ViewController: UIViewController, GADInterstitialDelegate {
     
     var blackView = UIView()
     var rollDiceTimes = 0
+    var colorCount = 0
+    let colors = ["F8AC99","FBAE50","FCD418","81CCB5","82C2EB","CCB7D9","928CC4"]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -67,11 +69,32 @@ class ViewController: UIViewController, GADInterstitialDelegate {
     }
     
     func getRandomColor() -> UIColor {
-        let red   = CGFloat((arc4random() % 256)) / 255.0
-        let green = CGFloat((arc4random() % 256)) / 255.0
-        let blue  = CGFloat((arc4random() % 256)) / 255.0
-        let alpha = CGFloat(0.3)
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        if colorCount > 6 {
+            colorCount = 0
+        }
+        return hexStringToUIColor(hex: colors[colorCount])
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -86,8 +109,9 @@ class ViewController: UIViewController, GADInterstitialDelegate {
             interstitial = loadInterstitial()
         }
         rollDiceTimes += 1
+        colorCount += 1
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        rollingAnimation()
+//        rollingAnimation()
         let number1 = Int.random(in: 1 ..< 7)
         let number2 = Int.random(in: 1 ..< 7)
         let number3 = Int.random(in: 1 ..< 7)

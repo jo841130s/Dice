@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C873B74E23C0981A00E2FF97 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873B74D23C0981A00E2FF97 /* GIF.swift */; };
-		C873B75423C0A18E00E2FF97 /* Dice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C873B75323C0A18D00E2FF97 /* Dice.mp4 */; };
-		C878F5DC23FCF02C00392D25 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C878F5DB23FCF02B00392D25 /* GoogleMobileAds.framework */; };
+		04300EAA251B32A500147F9B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04300EA9251B32A500147F9B /* GoogleMobileAds.framework */; };
 		C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470423BF443800F1FB02 /* AdSupport.framework */; };
 		C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470623BF444200F1FB02 /* AudioToolbox.framework */; };
 		C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470823BF444900F1FB02 /* AVFoundation.framework */; };
@@ -46,9 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C873B74D23C0981A00E2FF97 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
-		C873B75323C0A18D00E2FF97 /* Dice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dice.mp4; sourceTree = "<group>"; };
-		C878F5DB23FCF02B00392D25 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		04300EA9251B32A500147F9B /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../GoogleMobileAdsSdkiOS-7.65.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		C882470423BF443800F1FB02 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C882470623BF444200F1FB02 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C882470823BF444900F1FB02 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -82,12 +78,12 @@
 				C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */,
 				C882470F23BF445200F1FB02 /* CoreTelephony.framework in Frameworks */,
 				C882470D23BF445200F1FB02 /* CoreLocation.framework in Frameworks */,
+				04300EAA251B32A500147F9B /* GoogleMobileAds.framework in Frameworks */,
 				C882471523BF446700F1FB02 /* MessageUI.framework in Frameworks */,
 				C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */,
 				C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */,
 				C882471923BF447900F1FB02 /* SystemConfiguration.framework in Frameworks */,
 				C882471B23BF447D00F1FB02 /* WebKit.framework in Frameworks */,
-				C878F5DC23FCF02C00392D25 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,9 +150,7 @@
 				C8A82C0723A63A320036D1EC /* Assets.xcassets */,
 				C8A82C0923A63A320036D1EC /* LaunchScreen.storyboard */,
 				C8A82C0C23A63A320036D1EC /* Info.plist */,
-				C873B74D23C0981A00E2FF97 /* GIF.swift */,
-				C873B75323C0A18D00E2FF97 /* Dice.mp4 */,
-				C878F5DB23FCF02B00392D25 /* GoogleMobileAds.framework */,
+				04300EA9251B32A500147F9B /* GoogleMobileAds.framework */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -265,7 +259,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C873B75423C0A18E00E2FF97 /* Dice.mp4 in Resources */,
 				C8A82C0B23A63A320036D1EC /* LaunchScreen.storyboard in Resources */,
 				C8A82C0823A63A320036D1EC /* Assets.xcassets in Resources */,
 				C8A82C0623A63A320036D1EC /* Main.storyboard in Resources */,
@@ -295,7 +288,6 @@
 			files = (
 				C8A82C0323A63A320036D1EC /* ViewController.swift in Sources */,
 				C8A82BFF23A63A320036D1EC /* AppDelegate.swift in Sources */,
-				C873B74E23C0981A00E2FF97 /* GIF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +478,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = guangxin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,7 +513,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = guangxin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
