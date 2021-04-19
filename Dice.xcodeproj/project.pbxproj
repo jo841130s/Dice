@@ -478,7 +478,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
-				MARKETING_VERSION = 4.1;
+				MARKETING_VERSION = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = guangxin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,7 +513,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
-				MARKETING_VERSION = 4.1;
+				MARKETING_VERSION = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = guangxin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
