@@ -10,8 +10,10 @@ import UIKit
 import AudioToolbox
 import AVKit
 import GoogleMobileAds
+import AppTrackingTransparency
+import AdSupport
 
-class ViewController: UIViewController, GADInterstitialDelegate {
+class ViewController: UIViewController, GADFullScreenContentDelegate {
 
     @IBOutlet weak var diceView1: UIView!
     @IBOutlet weak var diceView2: UIView!
@@ -25,7 +27,7 @@ class ViewController: UIViewController, GADInterstitialDelegate {
     @IBOutlet weak var dice5: UIImageView!
     @IBOutlet var rollButton: UIButton!
     
-    var interstitial : GADInterstitial!
+    var interstitial : GADInterstitialAd?
     
     var blackView = UIView()
     var rollDiceTimes = 0
@@ -43,7 +45,13 @@ class ViewController: UIViewController, GADInterstitialDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         rollButton.layer.cornerRadius = 10
-        interstitial = loadInterstitial()
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                self.loadInterstitial()
+            })
+        } else {
+            loadInterstitial()
+        }
         dice1.isHidden = true
         dice2.isHidden = true
         dice4.isHidden = true
@@ -56,12 +64,20 @@ class ViewController: UIViewController, GADInterstitialDelegate {
         diceImageSetup(image: dice5)
     }
     
-    func loadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4893868639954563/1279400530")
-        interstitial.delegate = self
+    func loadInterstitial() {
         let request = GADRequest()
-        interstitial.load(request)
-        return interstitial
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-4893868639954563/1279400530",
+                                    request: request,
+                          completionHandler: { [self] ad, error in
+            if let error = error {
+              print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+              return
+            }
+            interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
+            interstitial?.present(fromRootViewController: self)
+          }
+        )
     }
     
     @IBAction func rollButtonPressed(_ sender: Any) {
@@ -106,7 +122,7 @@ class ViewController: UIViewController, GADInterstitialDelegate {
     func rollDice() {
         if rollDiceTimes >= Int.random(in: 5...8) {
             rollDiceTimes = 0
-            interstitial = loadInterstitial()
+            loadInterstitial()
         }
         rollDiceTimes += 1
         colorCount += 1
@@ -197,40 +213,19 @@ class ViewController: UIViewController, GADInterstitialDelegate {
         image.layer.cornerRadius = 20
     }
     
-    /// Tells the delegate an ad request succeeded.
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        print("interstitialDidReceiveAd")
-        if ad.isReady {
-          ad.present(fromRootViewController: self)
-        } else {
-          print("Ad wasn't ready")
-        }
+    /// Tells the delegate that the ad failed to present full screen content.
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
     }
 
-    /// Tells the delegate an ad request failed.
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    /// Tells the delegate that the ad presented full screen content.
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did present full screen content.")
     }
 
-    /// Tells the delegate that an interstitial will be presented.
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
-        print("interstitialWillPresentScreen")
-    }
-
-    /// Tells the delegate the interstitial is to be animated off the screen.
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        print("interstitialWillDismissScreen")
-    }
-
-    /// Tells the delegate the interstitial had been animated off the screen.
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        print("interstitialDidDismissScreen")
-    }
-
-    /// Tells the delegate that a user click will open another app
-    /// (such as the App Store), backgrounding the current app.
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-        print("interstitialWillLeaveApplication")
+    /// Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
     }
     
 }

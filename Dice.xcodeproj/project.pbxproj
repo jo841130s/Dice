@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04300EAA251B32A500147F9B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04300EA9251B32A500147F9B /* GoogleMobileAds.framework */; };
+		040CEF10262D7D0100AF55E6 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040CEF0F262D7D0000AF55E6 /* GoogleMobileAds.xcframework */; };
 		C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470423BF443800F1FB02 /* AdSupport.framework */; };
 		C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470623BF444200F1FB02 /* AudioToolbox.framework */; };
 		C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C882470823BF444900F1FB02 /* AVFoundation.framework */; };
@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04300EA9251B32A500147F9B /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../GoogleMobileAdsSdkiOS-7.65.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		040CEF0F262D7D0000AF55E6 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
 		C882470423BF443800F1FB02 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C882470623BF444200F1FB02 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C882470823BF444900F1FB02 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -76,9 +76,9 @@
 				C882471323BF445B00F1FB02 /* EventKit.framework in Frameworks */,
 				C882470E23BF445200F1FB02 /* CoreGraphics.framework in Frameworks */,
 				C882470923BF444900F1FB02 /* AVFoundation.framework in Frameworks */,
+				040CEF10262D7D0100AF55E6 /* GoogleMobileAds.xcframework in Frameworks */,
 				C882470F23BF445200F1FB02 /* CoreTelephony.framework in Frameworks */,
 				C882470D23BF445200F1FB02 /* CoreLocation.framework in Frameworks */,
-				04300EAA251B32A500147F9B /* GoogleMobileAds.framework in Frameworks */,
 				C882471523BF446700F1FB02 /* MessageUI.framework in Frameworks */,
 				C882470523BF443800F1FB02 /* AdSupport.framework in Frameworks */,
 				C882470723BF444200F1FB02 /* AudioToolbox.framework in Frameworks */,
@@ -150,7 +150,7 @@
 				C8A82C0723A63A320036D1EC /* Assets.xcassets */,
 				C8A82C0923A63A320036D1EC /* LaunchScreen.storyboard */,
 				C8A82C0C23A63A320036D1EC /* Info.plist */,
-				04300EA9251B32A500147F9B /* GoogleMobileAds.framework */,
+				040CEF0F262D7D0000AF55E6 /* GoogleMobileAds.xcframework */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -478,7 +478,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = guangxin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,7 +513,7 @@
 					"$(PROJECT_DIR)/Dice",
 					"$(PROJECT_DIR)/Dice/Adbert_iOS_SDK",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = guangxin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
